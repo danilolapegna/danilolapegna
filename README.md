@@ -56,6 +56,15 @@ This list is more honest than "currently exploring AI". I update it when somethi
 - LinkedIn: [danilo-lapegna](https://www.linkedin.com/in/danilo-lapegna/)
 - Wikidata: [Q139593287](https://www.wikidata.org/wiki/Q139593287)
 
+### Find me elsewhere (DL canonical identity)
+
+- [Mastodon — hachyderm.io/@danilolapegna](https://hachyderm.io/@danilolapegna) (federated tech, fellow security/infra people)
+- [IndieHackers — danilolapegna](https://indiehackers.com/danilolapegna) (solopreneur community)
+- [F6S — danilolapegna](https://www.f6s.com/danilolapegna) (founder profile)
+- [Sessionize — danilolapegna](https://sessionize.com/danilolapegna) (speaker bio for conference applications)
+- [Gravatar — danilolapegna](https://gravatar.com/danilolapegna) (cross-platform avatar)
+- [Newsletter — kintsugiproject.substack.com](https://kintsugiproject.substack.com) (lifehacking + builder mindset, evolving toward agentic AI / DL Solutions content)
+
 15+ years in software engineering before this. The CV is on LinkedIn if you need it. Most of what mattered isn't in it.
 
 ![Profile views](https://komarev.com/ghpvc/?username=danilolapegna&color=blueviolet)
