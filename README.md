@@ -4,7 +4,7 @@ Hi, I'm Danilo Lapegna. I do two things.
 
 I run [DL Solutions](https://danilolapegna.com), a one-person consultancy in Amsterdam. I help founders and companies (mostly EU and Italian, not exclusively) ship AI automations and agentic systems that don't quietly catch fire when nobody's looking.
 
-I write [Kintsugi Project](https://kintsugiproject.substack.com), a lifehacking newsletter with 4,000+ readers. It's where I think out loud about the boring side of being a builder.
+I write [Tech, AI & Life Quests](https://danilolapegna.substack.com), a builder mindset newsletter with 4,000+ readers. It's where I think out loud about the boring side of being a builder.
 
 <p align="center">
   <a href="https://danilolapegna.com">
@@ -96,7 +96,7 @@ This list is more honest than "currently exploring AI". I update it when somethi
 - [F6S — danilolapegna](https://www.f6s.com/danilolapegna) (founder profile)
 - [Sessionize — danilolapegna](https://sessionize.com/danilolapegna) (speaker bio for conference applications)
 - [Gravatar — danilolapegna](https://gravatar.com/danilolapegna) (cross-platform avatar)
-- [Newsletter — kintsugiproject.substack.com](https://kintsugiproject.substack.com) (lifehacking + builder mindset, evolving toward agentic AI / DL Solutions content)
+- [Newsletter — danilolapegna.substack.com](https://danilolapegna.substack.com) (Tech, AI & Life Quests — builder mindset, evolving toward agentic AI / DL Solutions content)
 
 15+ years in software engineering before this. The CV is on LinkedIn if you need it. Most of what mattered isn't in it.
 
