@@ -41,11 +41,12 @@ I write [Tech, AI & Life Quests](https://danilolapegna.substack.com), a builder 
 
 ---
 
-### What I'm building this week
+### What I'm building this week (May 2026)
 
-- An OWASP Top 10 for Agentic Applications mapping for an Italian mid-market client. Real case study, anonymous.
-- A RAG pipeline on regulated EU documents that doesn't violate three GDPR principles by accident.
-- An internal sales engine that uses Claude as a routing agent. Yes, dogfooding agentic security on my own funnel.
+- **Funnilo MVP scaffolding**. Reset from a prior product that became architecturally compromised. New build with a Failure Mode registry by design: every shippable feature must answer which of the 12 historical failure modes it prevents from reappearing. Boring discipline, fewer surprises in production.
+- **Autonomy AI: SaaS GTM completion**. Four-tier subscription pricing (€0 trial, €79, €199, €499/month), credit bundles, Lemon Squeezy as payment provider. Sprint 0 (pricing matrix + product seed) ready. Aimed at Italian SMEs who want automation results without commissioning a custom project.
+- **Builder-first positioning drift on this site and on danilolapegna.com**. Surgical edits, not a rebuild. The framing: I keep building my own things in parallel with client work, because the only way to recommend an architecture honestly is to have lived it.
+- **Open-sourced [vibecoding-skill-pack](https://github.com/danilolapegna/vibecoding-skill-pack)**. Claude Code skill pack with the same Failure Mode Registry above (12 FM catalogued from real production agent post-mortems) integrated as anti-pattern catalog. Every generated prompt declares which failure modes it prevents and which test gate verifies the prevention. MIT license. Drop-in install.
 
 This list is more honest than "currently exploring AI". I update it when something ships or breaks.
 
