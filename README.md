@@ -54,9 +54,13 @@ The current state of each project, with honest labels (in production, internal u
 
 ### Open source
 
-- **[vibecoding-skill-pack](https://github.com/danilolapegna/vibecoding-skill-pack)**. A Claude Code skill pack for structured agentic building, with a Failure Mode Registry at its core: a catalogue of failure modes from real post-mortems, split between how agentic systems get designed wrong and how green code reaches production and does not work. Every generated prompt declares which failure modes it prevents and which test gate verifies the prevention. MIT, drop-in install.
+Three pieces of the same idea: name the ways AI-assisted builds fail, block them at commit time, then prove the thing actually works before it ships.
 
-New entries land in that registry when something actually breaks and gets diagnosed, not on a content schedule. That is the honest version of "regularly updated".
+- **[vibecoding-skill-pack](https://github.com/danilolapegna/vibecoding-skill-pack)**, *name them*. A Claude Code skill pack built around a Failure Mode Registry: a catalogue of failure modes from real post-mortems, split between how agentic systems get designed wrong and how green code reaches production and does not work. Every generated prompt declares which failure modes it prevents and which test gate verifies the prevention.
+- **[agent-code-gates](https://github.com/danilolapegna/agent-code-gates)**, *block them*. Mechanical git gates that stop AI-written code from being declared done when it isn't. Twelve stack-agnostic gates, zero dependencies, one file each. The flagship one refuses a "production-ready" claim in a commit that has no observed runtime behind it.
+- **[deep-smoke](https://github.com/danilolapegna/deep-smoke)**, *prove it*. A levelled crawler that walks every reachable route, as every kind of user, signed in and signed out, and checks the page actually rendered something real. Evidence files are tied to the commit that produced them, so they cannot be hand-written to satisfy a gate.
+
+All MIT. New entries land in that registry when something actually breaks and gets diagnosed, not on a content schedule. That is the honest version of "regularly updated".
 
 ---
 
