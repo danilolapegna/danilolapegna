@@ -1,10 +1,12 @@
-# Most AI agents I audit fail in the first 48 hours of production.
+# I build systems across AI, software and business, and I run them myself before I recommend them.
 
-Hi, I'm Danilo Lapegna. I do two things.
+Hi, I'm Danilo Lapegna. Amsterdam.
 
-I run [DL Solutions](https://danilolapegna.com), a one-person consultancy in Amsterdam. I help founders and companies (mostly EU and Italian, not exclusively) ship AI automations and agentic systems that don't quietly catch fire when nobody's looking.
+I run [DL Solutions](https://danilolapegna.com), a one-person company. I help founders and companies, mostly in the EU, ship AI automations and agentic systems that keep working when nobody is watching. In parallel I build and operate my own products, which is where most of what I know about failure modes actually comes from. Advising on someone else's architecture teaches you a lot. Being on the hook for yours at 4am teaches you the rest.
 
-I write [Tech, AI & Life Quests](https://danilolapegna.substack.com), a builder mindset newsletter with 4,000+ readers. It's where I think out loud about the boring side of being a builder.
+Process comes before technology. That is the part most people skip.
+
+I also write [Tech, AI & Life Quests](https://danilolapegna.substack.com), a weekly builder newsletter with 4,000+ readers, where I think out loud about the boring side of building.
 
 <p align="center">
   <a href="https://danilolapegna.com">
@@ -15,9 +17,6 @@ I write [Tech, AI & Life Quests](https://danilolapegna.substack.com), a builder 
   </a>
   <a href="https://www.wikidata.org/wiki/Q139593287">
     <img src="https://img.shields.io/badge/Wikidata-Q139593287-006699?style=for-the-badge&logo=wikidata&logoColor=white" alt="Wikidata" />
-  </a>
-  <a href="https://hachyderm.io/@danilolapegna" rel="me">
-    <img src="https://img.shields.io/badge/Mastodon-@danilolapegna-6364FF?style=for-the-badge&logo=mastodon&logoColor=white" alt="Mastodon" />
   </a>
 </p>
 
@@ -41,31 +40,45 @@ I write [Tech, AI & Life Quests](https://danilolapegna.substack.com), a builder 
 
 ---
 
-### What I'm building this week (May 2026)
+### The three ways I work
 
-- **Funnilo MVP scaffolding**. Reset from a prior product that became architecturally compromised. New build with a Failure Mode registry by design: every shippable feature must answer which of the 12 historical failure modes it prevents from reappearing. Boring discipline, fewer surprises in production.
-- **Autonomy AI: SaaS GTM completion**. Four-tier subscription pricing (€0 trial, €79, €199, €499/month), credit bundles, Lemon Squeezy as payment provider. Sprint 0 (pricing matrix + product seed) ready. Aimed at Italian SMEs who want automation results without commissioning a custom project.
-- **Builder-first positioning drift on this site and on danilolapegna.com**. Surgical edits, not a rebuild. The framing: I keep building my own things in parallel with client work, because the only way to recommend an architecture honestly is to have lived it.
-- **Open-sourced [vibecoding-skill-pack](https://github.com/danilolapegna/vibecoding-skill-pack)**. Claude Code skill pack with the same Failure Mode Registry above (12 FM catalogued from real production agent post-mortems) integrated as anti-pattern catalog. Every generated prompt declares which failure modes it prevents and which test gate verifies the prevention. MIT license. Drop-in install.
+**Reuse what I have already built.** Products and tools that exist and run today, so you start from something working instead of from a blank repo. The open-source part of that lives here on GitHub.
 
-This list is more honest than "currently exploring AI". I update it when something ships or breaks.
+**Hand me a project.** AI automations, MVPs, agentic systems and the cloud infrastructure under them. I map the thing, build it, automate the repetitive parts, then hand over something that runs without me in the loop.
+
+**Bring me a business doubt.** Sometimes the useful thing is not a build, it is one conversation with someone who has shipped this before and will tell you which of your three options is actually two.
+
+The current state of each project, with honest labels (in production, internal use, experiment, prototype), lives on [danilolapegna.com](https://danilolapegna.com). I keep it there rather than here, so that this page does not quietly go stale while I am busy building.
 
 ---
 
-### Three field notes from 12 months of agentic production
+### Open source
 
-1. **Prompt injection isn't a future risk**. It already happened to a client of mine in week 2. The mitigation isn't filtering input. It's restricting what the agent is allowed to do, period.
+- **[vibecoding-skill-pack](https://github.com/danilolapegna/vibecoding-skill-pack)**. A Claude Code skill pack for structured agentic building, with a Failure Mode Registry at its core: a catalogue of failure modes from real post-mortems, split between how agentic systems get designed wrong and how green code reaches production and does not work. Every generated prompt declares which failure modes it prevents and which test gate verifies the prevention. MIT, drop-in install.
 
-2. **The "agent" abstraction lies to you**. Once an LLM has tools and memory, it's a distributed system with non-determinism baked in. Treat it like one: logs, dead-letter queues, idempotency, human-in-the-loop circuit breakers.
+New entries land in that registry when something actually breaks and gets diagnosed, not on a content schedule. That is the honest version of "regularly updated".
 
-3. **The hardest part isn't the model. It's the second time the agent runs**. State leakage, role confusion, tool misuse: these only surface in repeated invocations under real workload. Single-prompt evals catch maybe 30% of what breaks.
+---
+
+### Field notes from running agents in production
+
+1. **Prompt injection isn't a future risk.** It happened to a client of mine in week 2. The mitigation isn't filtering input. It's restricting what the agent is allowed to do, period.
+
+2. **The "agent" abstraction lies to you.** Once an LLM has tools and memory, it's a distributed system with non-determinism baked in. Treat it like one: logs, dead-letter queues, idempotency, human-in-the-loop circuit breakers.
+
+3. **The hardest part isn't the model, it's the second time the agent runs.** State leakage, role confusion, tool misuse: these only surface in repeated invocations under real workload. Single-prompt evals catch maybe 30% of what breaks.
+
+4. **Green CI is not a working product.** Code compiles, deploys, and is still dead: env vars missing at build time, a shared module that takes down every function importing it, an endpoint that answers your tests and rejects the credential its own scheduler sends. Verify from the artifact you actually served, never from the toast that said it worked.
+
+5. **A rule nobody can fail is not a rule.** Written guidance that asks people, or agents, to remember something has a measurable half-life of about a week. If it matters, it needs a command that fails when it is skipped.
 
 ---
 
 ### What I am not
 
 - A "vibe-coding" influencer. I write code that runs at 4am for paying clients.
-- A founder who rebrands every six months. DL Solutions is the same boring entity since 2017. Italian KvK 67250742, Dutch ZZP, you can verify.
+<!-- leak-scan-allow: public business register identity, deliberately published so the claim is verifiable -->
+- A founder who rebrands every six months. DL Solutions is the same boring entity since 2017. Dutch ZZP, KvK 67250742, Amsterdam. You can verify it.
 - An "AI optimist" or "AI pessimist". Both positions are advertising.
 
 ---
@@ -86,44 +99,18 @@ This list is more honest than "currently exploring AI". I update it when somethi
 
 ### Reach me
 
-- Site: [Danilo Lapegna](https://danilolapegna.com) (public calendar booking, async-first, no phone)
+- Site: [danilolapegna.com](https://danilolapegna.com), public calendar booking, async-first, no phone
 - LinkedIn: [danilo-lapegna](https://www.linkedin.com/in/danilo-lapegna/)
 - Wikidata: [Q139593287](https://www.wikidata.org/wiki/Q139593287)
 
-### Find me elsewhere (DL canonical identity)
+### Find me elsewhere
 
-- [Mastodon — hachyderm.io/@danilolapegna](https://hachyderm.io/@danilolapegna) (federated tech, fellow security/infra people)
-- [IndieHackers — danilolapegna](https://indiehackers.com/danilolapegna) (solopreneur community)
-- [F6S — danilolapegna](https://www.f6s.com/danilolapegna) (founder profile)
-- [Sessionize — danilolapegna](https://sessionize.com/danilolapegna) (speaker bio for conference applications)
-- [Gravatar — danilolapegna](https://gravatar.com/danilolapegna) (cross-platform avatar)
-- [Newsletter — danilolapegna.substack.com](https://danilolapegna.substack.com) (Tech, AI & Life Quests — builder mindset, evolving toward agentic AI / DL Solutions content)
+- [IndieHackers](https://indiehackers.com/danilolapegna), solopreneur community
+- [F6S](https://www.f6s.com/danilolapegna), founder profile
+- [Sessionize](https://sessionize.com/danilolapegna), speaker bio
+- [Gravatar](https://gravatar.com/danilolapegna), cross-platform avatar
+- [Newsletter](https://danilolapegna.substack.com), Tech, AI & Life Quests
 
 15+ years in software engineering before this. The CV is on LinkedIn if you need it. Most of what mattered isn't in it.
 
 ---
-
-### What I publish (deep guides, not posts)
-
-The serious writing lives at [danilolapegna.com/guides](https://danilolapegna.com/guides) — bilingual EN/IT pillar + cluster:
-
-- 🛡️ [Agentic AI Security for SMEs — the 2026 Guide](https://danilolapegna.com/guides/agentic-ai-security) (3000+ words pillar)
-- 🎯 [OWASP Top 10 for Agentic Applications mapped to Italian SMBs](https://danilolapegna.com/guides/owasp-top-10-agentic-applications-italian-smb)
-- 💉 [Prompt Injection 2026: real case studies and surgical mitigation](https://danilolapegna.com/guides/prompt-injection-2026-case-studies-italian-smb)
-- 📜 [EU AI Act + DORA: regulatory timeline for AI agent builders](https://danilolapegna.com/guides/ai-act-dora-eu-regulatory-timeline-italian-smb)
-- 🔐 [Minimum permissions for AI agents — least authority applied](https://danilolapegna.com/guides/least-authority-ai-agents-italian-smb)
-- 📊 [Audit-ready agents: the logging that saves you when incidents happen](https://danilolapegna.com/guides/audit-ready-agents-logging-italian-smb)
-
----
-
-### GitHub stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=danilolapegna&show_icons=true&hide_border=true&bg_color=1A1A2E&title_color=C9A84C&icon_color=C9A84C&text_color=FFFFFF" alt="GitHub stats" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=danilolapegna&layout=compact&hide_border=true&bg_color=1A1A2E&title_color=C9A84C&text_color=FFFFFF" alt="Top languages" height="160" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=danilolapegna&color=C9A84C&style=flat-square&label=Profile+views" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/danilolapegna?style=flat-square&color=C9A84C&labelColor=1A1A2E" alt="Followers" />
-</p>
