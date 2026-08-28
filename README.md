@@ -62,6 +62,10 @@ Three pieces of the same idea: name the ways AI-assisted builds fail, block them
 
 All MIT. New entries land in that registry when something actually breaks and gets diagnosed, not on a content schedule. That is the honest version of "regularly updated".
 
+One newer project deals with a different failure: treating a statistical mark in AI-assisted text as a verdict about who had the idea.
+
+- **[Claude Watermark Toolkit](https://github.com/danilolapegna/claude-watermark-toolkit)**, *rebuild the text, preserve the thought*. A local-first, non-Anthropic toolkit for reconstructing text from claims and evidence instead of swapping random synonyms. It includes paths for non-technical writers, copyable prompts, an agent skill, fact protection, candidate comparison and experimental adaptive search. It does not pretend to reproduce Anthropic's private detector or promise a result it cannot verify. The reasoning and practical methods are also available as a native [English guide](https://danilolapegna.com/guides/claude-text-watermark-guide.html) and [Italian guide](https://danilolapegna.com/guides/guida-watermark-testi-claude.html).
+
 ---
 
 ### Field notes from running agents in production
