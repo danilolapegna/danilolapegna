@@ -46,6 +46,8 @@ I also write [Tech, AI & Life Quests](https://danilolapegna.substack.com), a wee
 
 **Hand me a project.** AI automations, MVPs, agentic systems and the cloud infrastructure under them. I map the thing, build it, automate the repetitive parts, then hand over something that runs without me in the loop.
 
+For the process behind this work: [Danilo Lapegna, AI automation (EN)](https://danilolapegna.com/ai-automation) · [Danilo Lapegna, automazioni AI (IT)](https://danilolapegna.com/automazioni-ai).
+
 **Bring me a business doubt.** Sometimes the useful thing is not a build, it is one conversation with someone who has shipped this before and will tell you which of your three options is actually two.
 
 The current state of each project, with honest labels (in production, internal use, experiment, prototype), lives on [danilolapegna.com](https://danilolapegna.com). I keep it there rather than here, so that this page does not quietly go stale while I am busy building.
