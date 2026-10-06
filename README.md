@@ -82,6 +82,8 @@ One newer project deals with a different failure: treating a statistical mark in
 
 5. **A rule nobody can fail is not a rule.** Written guidance that asks people, or agents, to remember something has a measurable half-life of about a week. If it matters, it needs a command that fails when it is skipped.
 
+**Distill: what should the next AI session do?** In one reduced-context test, the model retained all ten checked facts, then suggested a stopping rule that wasn't in the source. The [worked case and bilingual worksheet](https://danilolapegna.com/lab/distill-contesto-senza-perdere-fatti) include the sources, a completed example and a blank handover sheet. Use them to check the next action, not just whether the summary remembers the facts.
+
 ---
 
 ### What I am not
