@@ -82,7 +82,7 @@ One newer project deals with a different failure: treating a statistical mark in
 
 5. **A rule nobody can fail is not a rule.** Written guidance that asks people, or agents, to remember something has a measurable half-life of about a week. If it matters, it needs a command that fails when it is skipped.
 
-**Distill: what should the next AI session do?** In one reduced-context test, the model retained all ten checked facts, then suggested a stopping rule that wasn't in the source. The [worked case and bilingual worksheet](https://danilolapegna.com/lab/distill-contesto-senza-perdere-fatti) include the sources, a completed example and a blank handover sheet. Use them to check the next action, not just whether the summary remembers the facts.
+**Distill: experiments in using fewer AI tokens.** We're testing how much context we can remove while keeping the information an AI needs for a task. In one test, input fell by 78.4% and all ten checked facts survived, but the model also suggested an unsupported stopping rule. The [results and bilingual kit](https://danilolapegna.com/lab/distill-contesto-senza-perdere-fatti) include a worksheet, a worked example and the source documents. The kit is filled in manually; it isn't an automatic compressor, and we haven't established an overall cost saving.
 
 ---
 
@@ -119,7 +119,7 @@ One newer project deals with a different failure: treating a statistical mark in
 
 - [IndieHackers](https://indiehackers.com/danilolapegna), solopreneur community
 - [F6S](https://www.f6s.com/danilolapegna), founder profile
-- [Sessionize](https://sessionize.com/danilolapegna), speaker bio
+- [Sessionize](https://sessionize.com/danilo-lapegna/), speaker bio
 - [Gravatar](https://gravatar.com/danilolapegna), cross-platform avatar
 - [Newsletter](https://danilolapegna.substack.com), Tech, AI & Life Quests
 
